@@ -14,6 +14,7 @@ function Card(props) {
     function likeThePost(){
 
         if(likePost === false){
+            setLikePost(true);
             axios({
                 method: 'put',
                 url: `https://dummyapi.io/data/v1/post/${postID}/`,
@@ -23,9 +24,9 @@ function Card(props) {
                 }
             }).then((response) => {
                 setTotalLike(parseInt(totalLike)+1)
-                setLikePost(true);
             });
         }else{
+            setLikePost(false);
             axios({
                 method: 'put',
                 url: `https://dummyapi.io/data/v1/post/${postID}/`,
@@ -35,7 +36,6 @@ function Card(props) {
                 }
             }).then((response) => {
                 setTotalLike(parseInt(totalLike)-1)
-                setLikePost(false);
             });
         }
         
@@ -43,11 +43,11 @@ function Card(props) {
 
 
     function deleteThePost(){
+        document.getElementById(postID).style.display = 'none';
         axios.delete(`https://dummyapi.io/data/v1/post/${postID}/`, {
             headers : {"app-id": "6387b00ac20bb7956c1062d4"},
         }).then((response) => {
             alert("Deleted");
-            document.getElementById(postID).style.display = 'none';
         });
     }
     if(props.filter === false){

@@ -36,7 +36,7 @@ function App() {
     <div className="App">
       <div className="my-2 top-0 rounded  text-center">
 
-        <button onClick={filterLikedPost} className="bg-violet-400  hover:bg-blue-400 text-white font-bold py-2 px-4">
+        <button onClick={filterLikedPost} className={filterActive?"bg-blue-400 hover:bg-blue-400 text-white font-bold py-2 px-4":"bg-violet-400 hover:bg-violet-400 text-white font-bold py-2 px-4>"}>
             Filter by Like
         </button>
 
