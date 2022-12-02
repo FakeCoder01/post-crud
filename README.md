@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+# Live Project Link <a href="https://fakecoder01.github.io/post-crud">https://fakecoder01.github.io/post-crud</a>s
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
